@@ -50,11 +50,13 @@ def get_response(text,user_question,OPENAI_API_KEY):
     response = chain.run(input_documents = match, question = user_question)
     return response
 
+
 st.title('Souvik Chattopadhyay')
 st.markdown("<description>Lets walkthrough the profile of Souvik</description>",unsafe_allow_html=True)
 
 st.sidebar.title('Select options for detailed view')
 detail_check=st.sidebar.checkbox('Get Detailed Experience')
+
 question = st.sidebar.text_input("Ask any sepcific question about Souvik")
 
 resume_file='./CV_Souvik Chattopadhyay_9.pdf'
@@ -66,6 +68,7 @@ if question:
     response=get_response(text,question,OPENAI_API_KEY)
     st.sidebar.write(response)
 # print(text)
+
 detail_data=pd.read_csv('https://docs.google.com/spreadsheets/d/'+
                          '1w9ygDJHd1e9g9LARlZu9nmWa-OUDpkMtKmwIXKsQY3g/export?format=csv&gid=0')
 if(detail_check):
