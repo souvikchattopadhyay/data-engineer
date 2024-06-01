@@ -3,3 +3,4 @@ pypdf2
 langchain
 langchain_community
 plotly
+openai
