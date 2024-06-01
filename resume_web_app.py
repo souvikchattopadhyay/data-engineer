@@ -11,10 +11,10 @@ import pandas as pd
 import plotly.express as px
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
 OPENAI_API_KEY= st.secrets["open_api_key"]
 def get_response(text,user_question,OPENAI_API_KEY):
