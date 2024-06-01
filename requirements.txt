@@ -6,3 +6,4 @@ plotly
 openai
 tiktoken
 langchain_openai
+faiss-cpu
