@@ -4,3 +4,5 @@ langchain
 langchain_community
 plotly
 openai
+tiktoken
+langchain_openai
