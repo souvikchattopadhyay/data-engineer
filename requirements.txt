@@ -1,5 +1,6 @@
 streamlit==1.24.0
 pypdf2
+pymysql
 langchain
 langchain_community
 plotly
