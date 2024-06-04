@@ -3,6 +3,7 @@ pypdf2
 pymysql
 langchain
 langchain_community
+langchain_experimental
 plotly
 openai
 tiktoken
