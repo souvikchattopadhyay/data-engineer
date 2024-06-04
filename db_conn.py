@@ -17,7 +17,7 @@ mysql_uri = f"mysql+pymysql://{username}:{password}@{host}:{port}/{database_sche
 db = SQLDatabase.from_uri(mysql_uri)
 
 #create llm
-
+OPENAI_API_KEY= st.secrets["open_api_key"]
 llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo')
 
 #create chain
