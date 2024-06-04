@@ -6,11 +6,11 @@ from langchain_community.utilities import SQLDatabase
 from langchain_experimental.sql  import SQLDatabaseChain
 
 # db connection
-host = 'localhost'
-port = '3306'
-username = 'root'
-password = 'root1234'
-database_schema = 'datadb'
+host = st.secrets["host"]
+port = st.secrets["port"]
+username = st.secrets["username"]
+password = st.secrets["password"]
+database_schema = st.secrets["database_schema"]
 mysql_uri = f"mysql+pymysql://{username}:{password}@{host}:{port}/{database_schema}"
 
 
