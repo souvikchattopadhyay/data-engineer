@@ -69,15 +69,15 @@ if question:
     st.sidebar.write(response)
 # print(text)
 
-detail_data=pd.read_csv('https://docs.google.com/spreadsheets/d/'+
-                         '1w9ygDJHd1e9g9LARlZu9nmWa-OUDpkMtKmwIXKsQY3g/export?format=csv&gid=0')
-if(detail_check):
-    st.dataframe(detail_data)
+# detail_data=pd.read_csv('https://docs.google.com/spreadsheets/d/'+
+#                          '1w9ygDJHd1e9g9LARlZu9nmWa-OUDpkMtKmwIXKsQY3g/export?format=csv&gid=0')
+# if(detail_check):
+#     st.dataframe(detail_data)
    
 tabluar_check=st.checkbox('View Tabluar')
 
 summary_data=pd.read_csv('https://docs.google.com/spreadsheets/d/'+
-                         '1w9ygDJHd1e9g9LARlZu9nmWa-OUDpkMtKmwIXKsQY3g/export?format=csv&gid=1508555704',
+                         '1SGudeThfURf7LgVjiSVq2MlLMf17o8Yu1L8YHWgS5ms/export?format=csv&gid=366008444',
                           parse_dates=['Start Date','End Date'])
 if(tabluar_check):
     st.write(summary_data)
@@ -87,7 +87,7 @@ exp_summary_graph=px.bar(data_frame=summary_data,x='Organization',y='Experience'
 st.plotly_chart(exp_summary_graph)
 
 skill_data = pd.read_csv('https://docs.google.com/spreadsheets/d/'+
-                         '1w9ygDJHd1e9g9LARlZu9nmWa-OUDpkMtKmwIXKsQY3g/export?format=csv&gid=1094379956')
+                         '1SGudeThfURf7LgVjiSVq2MlLMf17o8Yu1L8YHWgS5ms/export?format=csv&gid=0')
 skill_summary_graph=px.bar(data_frame=skill_data,x='Skill',y='Experience',
                          labels={'Experience':'Experience (in years)'},color='Skill')
 st.plotly_chart(skill_summary_graph)
